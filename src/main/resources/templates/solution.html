@@ -3,12 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <title>Solution</title>
+    <link rel="stylesheet" href="css/solution.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="container">
     <div class="row">BMI: <strong th:text="${bmi.solution}"></strong></div>
     <div class="row">Level: <strong th:text="${bmi.information}"></strong></div>
-    <a class="link" th:href="@{/bmi}" >Go back</a>
+    <a class="link" th:href="@{/bmi}">Go back</a>
+
+    <div class="row">
+        <div class="table">
+            <table>
+                <thead>
+                <tr>
+                    <th>BMI Value</th>
+                    <th>Meaning</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>< 18,5 kg/m²</td>
+                    <td>Underweight</td>
+                </tr>
+                <tr>
+                    <td>18,5 – 24,9 kg/m²</td>
+                    <td>Correct body mass</td>
+                </tr>
+                <tr>
+                    <td>25 – 29,9 kg/m²</td>
+                    <td>Overweight</td>
+                </tr>
+                <tr>
+                    <td>30 – 34,9 kg/m²</td>
+                    <td>1st degree obesity</td>
+                </tr>
+                <tr>
+                    <td>35 – 39,9 kg/m²</td>
+                    <td>2nd degree obesity</td>
+                </tr>
+                <tr>
+                    <td>> 40 kg/m²</td>
+                    <td>3rd degree obesity</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 </body>
 </html>

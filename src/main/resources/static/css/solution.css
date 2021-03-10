@@ -1,0 +1,30 @@
+td, th{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+ }
+
+th{
+    background-color: #e8933f;
+ }
+
+table{
+    border-collapse: collapse;
+    margin: auto;
+ }
+
+body{
+    background-color: #f8ca87;
+}
+
+.container{
+    text-align: center;
+    font-family: 'Noto Sans SC', sans-serif;
+    margin-top: 50px;
+}
+
+.row{
+    margin: 30px;
+}
+
