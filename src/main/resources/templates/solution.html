@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Solution</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">BMI: <strong th:text="${bmi.solution}"></strong></div>
+    <div class="row">Level: <strong th:text="${bmi.information}"></strong></div>
+    <a class="link" th:href="@{/bmi}" >Go back</a>
+</div>
+</body>
+</html>

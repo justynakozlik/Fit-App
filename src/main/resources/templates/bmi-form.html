@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Count your BMI</title>
+</head>
+<body>
+<div class="container">
+    <form class="form" th:object="${bmi}" th:action="@{/solution}" th:method="post">
+        <div class="row">
+            <div class="row2"><label class="label">Enter your height in meters (m)</label></div>
+            <div class="row2"><label class="label">Height <input class="input" type="number" th:field="*{height}" step="0.01" min="1.00" max="2.20"/></label></div>
+        </div>
+        <div class="row">
+            <div class="row2"><label class="label">Enter your mass in kilograms (kg)</label></div>
+            <div class="row2"><label class="label">Mass <input class="input" type="number" th:field="*{mass}" step="0.01" min="20.00" max="300.00"/></label></div>
+        </div>
+        <div class="row">
+            <button class="button" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
