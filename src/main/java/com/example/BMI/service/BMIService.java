@@ -24,13 +24,13 @@ public class BMIService implements BMIRepository {
     public String info(double solution) {
         if (solution < 18.5) {
             return "Underweight";
-        } else if (solution == 18.5 || solution < 24.9) {
+        } else if (solution == 18.5 || solution <= 24.99) {
             return "Correct body weight";
-        } else if (solution == 25 || solution < 29.9) {
+        } else if (solution == 25 || solution <= 29.99) {
             return "Overweight";
-        } else if (solution == 30 || solution < 34.9) {
+        } else if (solution == 30 || solution <= 34.99) {
             return "1st degree obesity";
-        } else if (solution == 35 || solution < 39.9) {
+        } else if (solution == 35 || solution <= 39.99) {
             return "2nd degree obesity";
         } else if (solution > 40) {
             return "3rd degree obesity";

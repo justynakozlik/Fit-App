@@ -3,24 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Count your BMI</title>
-    <link rel="stylesheet" href="css/bmi-form.css" type="text/css">
+    <link rel="stylesheet" href="css/bmi_form.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-    <form class="form" th:object="${bmi}" th:action="@{/solution}" th:method="post">
+<div id="container">
+    <div id="rectangle">
+        <h1>BMI Calculator</h1>
+        <h3>Check if your BMI is correct</h3>
+    </div>
+    <div class="square">
+        <form class="form" th:object="${bmi}" th:action="@{/solution}" th:method="post">
+            <div class="row">
+                <div class="row2"><label><b>Enter your height in meters (m)</b></label></div>
+                <div class="row2"><label class="label">Height <input class="input" type="number"
+                                                                     th:field="*{height}"
+                                                                     step="0.01" min="1.00" max="2.20"/></label></div>
+            </div>
+            <div class="row">
+                <div class="row2"><label><b>Enter your mass in kilograms (kg)</b></label></div>
+                <div class="row2"><label class="label">Mass <input class="input" type="number"
+                                                                   th:field="*{mass}"
+                                                                   step="0.01" min="20.00" max="300.00"/></label></div>
+            </div>
+            <div>
+                <button id="button" type="submit"><b>Count</b></button>
+            </div>
+        </form>
+    </div>
+    <div class="square">
         <div class="row">
-            <div class="row2"><label class="label">Enter your height in meters (m)</label></div>
-            <div class="row2"><label class="label">Height <input class="input" type="number" th:field="*{height}" step="0.01" min="1.00" max="2.20"/></label></div>
+            <h4>BMI</h4>
         </div>
         <div class="row">
-            <div class="row2"><label class="label">Enter your mass in kilograms (kg)</label></div>
-            <div class="row2"><label class="label">Mass <input class="input" type="number" th:field="*{mass}" step="0.01" min="20.00" max="300.00"/></label></div>
+            <p>The BMI (Body Mass Index) calculator is a tool that allows you to check whether your body weight is
+                correct. The BMI indirectly describes the body fat content based on the proportion of body weight
+                measured in kilograms to height in meters. Check that your BMI is correct.</p>
         </div>
-        <div class="row">
-            <button class="button" type="submit">Submit</button>
-        </div>
-    </form>
+    </div>
+    <div style="clear: both;"></div>
+    <div id="footer">
+        <img src="https://lh3.googleusercontent.com/proxy/6sblgwunb9KWx0Ws6Un-z9yxww2EzFPVyPDxSCC9Oqn13AP3G5fdPJd98ziS_2pBxRqI39PZNXOubjMLAVI4ETwephMchrR4mCiD0dGEbsMF_ynmDo4PwT5qEHk6rnlsBN1O6dVvoIU7">
+    </div>
 </div>
 </body>
 </html>
