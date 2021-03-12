@@ -5,54 +5,75 @@
     <title>Solution</title>
     <link rel="stylesheet" href="css/solution.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
-<div class="container">
-    <div class="row">BMI: <strong th:text="${bmi.solution}"></strong></div>
-    <div class="row">Level: <strong th:text="${bmi.information}"></strong></div>
-    <a class="link" th:href="@{/bmi}">Go back</a>
-
-    <div class="row">
-        <div class="table">
-            <table>
-                <thead>
-                <tr>
-                    <th>BMI Value</th>
-                    <th>Meaning</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>< 18,50 kg/m²</td>
-                    <td>Underweight</td>
-                </tr>
-                <tr>
-                    <td>18,50 – 24,99 kg/m²</td>
-                    <td>Correct body mass</td>
-                </tr>
-                <tr>
-                    <td>25 – 29,99 kg/m²</td>
-                    <td>Overweight</td>
-                </tr>
-                <tr>
-                    <td>30 – 34,99 kg/m²</td>
-                    <td>1st degree obesity</td>
-                </tr>
-                <tr>
-                    <td>35 – 39,99 kg/m²</td>
-                    <td>2nd degree obesity</td>
-                </tr>
-                <tr>
-                    <td>> 40 kg/m²</td>
-                    <td>3rd degree obesity</td>
-                </tr>
-                </tbody>
-            </table>
+<div id="container">
+    <div class="square">
+        <h3>Your result</h3>
+        <div id="square2">
+            <div class="row">BMI: <strong th:text="${bmi.solution}"></strong></div>
+            <div class="row">Level: <strong th:text="${bmi.information}"></strong></div>
+            <div class="row"><a th:href="@{/bmi}">Go back to BMI Calculator</a></div>
         </div>
     </div>
-    <div class="row">
-        <img src="https://www.coca-cola.pl/content/dam/one/pl/poczuj-sie-dobrze/jedz-zdrowo/fit-sniadanie.jpg" alt="fit">
+    <div class="square">
+        <table>
+            <thead>
+            <tr>
+                <th style="border-top-left-radius: 15px;">BMI Value</th>
+                <th style="border-top-right-radius: 15px;">Meaning</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>< 18,50 kg/m²</td>
+                <td>Underweight</td>
+            </tr>
+            <tr>
+                <td>18,50 – 24,99 kg/m²</td>
+                <td>Correct body mass</td>
+            </tr>
+            <tr>
+                <td>25 – 29,99 kg/m²</td>
+                <td>Overweight</td>
+            </tr>
+            <tr>
+                <td>30 – 34,99 kg/m²</td>
+                <td>1st degree obesity</td>
+            </tr>
+            <tr>
+                <td>35 – 39,99 kg/m²</td>
+                <td>2nd degree obesity</td>
+            </tr>
+            <tr>
+                <td style="border-bottom-left-radius: 15px;">> 40 kg/m²</td>
+                <td style="border-bottom-right-radius: 15px;">3rd degree obesity</td>
+            </tr>
+            </tbody>
+        </table>
     </div>
+    <div style="clear: both;"></div>
+    <div class="square">
+        <div id="square3">
+            <div class="inner_square1">
+                <a class="tilelink" th:href="@{/bmi}">
+                    <i class="fas fa-calculator" style="font-size:50px"></i></br></br><b>Caloric demand calculator</b>
+                </a>
+            </div>
+            <div class="inner_square2">
+                <a class="tilelink" th:href="@{/bmi}">
+                    <i class="fas fa-utensils" style="font-size:50px"></i></br></br><b>Check out some recipes</b>
+                </a>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+    </div>
+    <div class="square">
+        <img src="https://www.lifelinescreening.com/-/media/project/life-line-screening/life-line-screening/6-health-education/articles/diet-and-nutrition/fruits-and-vegetables.jpg">
+    </div>
+    <div style="clear: both;"></div>
 </div>
 </body>
 </html>
