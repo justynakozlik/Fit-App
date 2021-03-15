@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+<div id="square2">
+    <div class="row"><label>Daily energy requirements to maintain a given weight is:</label></div>
+    <div class="row"><strong th:text="${kcal.solution}"></strong>
+        <label> kcal</label></div>
+    <div class="row"><a th:href="@{/kcal}">Go back to Caloric demand calculator</a></div>
+</div>
+</body>
+</html>

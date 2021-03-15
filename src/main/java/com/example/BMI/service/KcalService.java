@@ -25,17 +25,17 @@ public class KcalService implements KcalRepository {
 
     @Override
     public double lifestyle(String lifestyleS) {
-        if (lifestyleS.equals("lying or sedentary lifestyle, lack of physical activity")) {
+        if (lifestyleS.equals("a")) {
             return 1.0;
-        } else if (lifestyleS.equals("sedentary work, low-level physical activity")) {
+        } else if (lifestyleS.equals("b")) {
             return 1.2;
-        } else if (lifestyleS.equals("non-physical work, training twice a week")) {
+        } else if (lifestyleS.equals("c")) {
             return 1.4;
-        } else if (lifestyleS.equals("light physical work, training 3-4 times a week")) {
+        } else if (lifestyleS.equals("d")) {
             return 1.6;
-        } else if (lifestyleS.equals("physical work, training 5 times a week")) {
+        } else if (lifestyleS.equals("e")) {
             return 1.8;
-        } else if (lifestyleS.equals("hard physical work, daily training")) {
+        } else if (lifestyleS.equals("f")) {
             return 2.0;
         } else {
             return 0;

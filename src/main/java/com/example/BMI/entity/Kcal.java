@@ -8,15 +8,16 @@ public class Kcal {
     private double lifestyle;
     private String lifestyleS;
     private String gender;
-    private double solution;
+    private String solution;
 
     public Kcal(){}
 
-    public Kcal(int age, int height, double mass, double lifestyle) {
+    public Kcal(int age, int height, double mass, String lifestyleS, String gender) {
         this.age = age;
         this.height = height;
         this.mass = mass;
-        this.lifestyle = lifestyle;
+        this.lifestyleS = lifestyleS;
+        this.gender = gender;
     }
 
     public int getAge() {
@@ -67,11 +68,11 @@ public class Kcal {
         this.gender = gender;
     }
 
-    public double getSolution() {
+    public String getSolution() {
         return solution;
     }
 
-    public void setSolution(double solution) {
+    public void setSolution(String solution) {
         this.solution = solution;
     }
 
