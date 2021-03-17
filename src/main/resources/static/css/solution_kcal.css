@@ -1,0 +1,99 @@
+body{
+    background-color: #303030;
+}
+
+#container{
+    font-family: 'Noto Sans SC', sans-serif;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    }
+
+.row{
+     margin: 15px 0px 15px 0px;
+     padding: 15px 0px 15px 0px;
+   }
+
+#row2{
+      margin: 20px;
+      padding-bottom: 15px;
+    }
+
+.square{
+     width: 50%;
+     float: left;
+     text-align: center;
+     margin-bottom: 50px;
+   }
+
+.square2{
+    width: 460px;
+    background-color: #e2e2e2;
+    border-radius: 15px;
+    color: #202020;
+    margin: auto;
+}
+
+#square3{
+    width: 400px;
+    margin: auto;
+}
+
+.inner_square1{
+    float: left;
+    background-color: #97fa78;
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    padding-top: 15px;
+    border-radius: 15px;
+    color: #202020;
+}
+
+.inner_square1:hover{
+    background-color: #71be61;
+}
+
+.inner_square2{
+    float: left;
+    background-color: #ffa608;
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    padding-top: 15px;
+    border-radius: 15px;
+    color: #202020;
+}
+
+.inner_square2:hover{
+    background-color: #ff8108;
+}
+
+img{
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    margin: auto;
+}
+
+h3{
+    color: #ff6525;
+    font-size: 30px;
+}
+
+a.tilelink{
+    color: #303030;
+    text-decoration: none;
+    display: block;
+}
+
+h4{
+font-size: 18px;
+padding-top: 20px;
+}
+
+p{
+text-align: justify;
+}
+
