@@ -40,7 +40,7 @@ class KcalServiceTest {
     @Test
     void givenExemplaryParametersAndFemaleGenderWhenCountMethodIsUsedThenCorrectFormulaIsReturned(){
         double count = service.count(age, height, mass, lifestyle, "female");
-        Assertions.assertTrue(count == 939.2);
+        Assertions.assertTrue(count == 1529.2);
     }
 
     @Test

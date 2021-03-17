@@ -3,54 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <title>Caloric demand calculator</title>
+    <link rel="stylesheet" href="css/kcal_form.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-<div>
-    <form th:object="${kcal}" th:action="@{/solution_kcal}" th:method="post">
-        <div class="row">
-            <div class="row2"><label><b>Enter your height in meters (cm)</b></label></div>
-            <div class="row2"><label class="label">Height <input class="input" type="number"
-                                                                 th:field="*{height}"
-                                                                 step="1" min="100" max="220"/></label></div>
-        </div>
-        <div class="row">
-            <div class="row2"><label><b>Enter your mass in kilograms (kg)</b></label></div>
-            <div class="row2"><label class="label">Mass <input class="input" type="number"
-                                                               th:field="*{mass}"
-                                                               step="0.01" min="20.00" max="300.00"/></label></div>
-        </div>
-        <div class="row">
-            <div class="row2"><label><b>Enter your age</b></label></div>
-            <div class="row2"><label class="label">Age <input class="input" type="number"
-                                                               th:field="*{age}"
-                                                               step="1" min="1" max="100"/></label></div>
-        </div>
-        <div class="row">
-            <div class="row2"><label><b>Choose gender:</b></label></div>
-            <div class="row2"><label class="label">Male <input class="input" type="radio"
-                                                               th:field="*{gender}" name="gender" th:value="'male'"
-            /></label></div>
-            <div class="row2"><label class="label">Female <input class="input" type="radio"
-                                                                 th:field="*{gender}" name="gender" th:value="'female'"
-            /></label></div>
-        </div>
-        <div class="row">
-            <label for="lifestyle">Lifestyle:</label>
-            <select id="lifestyle" name="lifestyle" th:field="*{lifestyleS}">
-                <option  th:value="'a'">lying or sedentary lifestyle, lack of physical
-                    activity
-                </option>
-                <option  th:value="'b'">sedentary work, low-level physical activity</option>
-                <option  th:value="'c'">non-physical work, training twice a week</option>
-                <option  th:value="'d'">light physical work, training 3-4 times a week</option>
-                <option  th:value="'e'">physical work, training 5 times a week</option>
-                <option  th:value="'f'">hard physical work, daily training</option>
-            </select>
-        </div>
-        <div>
-            <button id="button" type="submit"><b>Count</b></button>
-        </div>
-    </form>
+<div id="container">
+    <div id="rectangle">
+        <h1>Caloric demand calculator</h1>
+        <h3>Calculate your caloric requirement</h3>
+    </div>
+    <div id="formdiv">
+        <form th:object="${kcal}" th:action="@{/solution_kcal}" th:method="post">
+            <div class="row" style="margin-left: 150px;">
+                <div class="row2"><label><b>Enter your height in meters (cm)</b></label></div>
+                <div class="row2"><label class="label">Height <input class="input" type="number"
+                                                                     th:field="*{height}"
+                                                                     step="1" min="100" max="220"/></label></div>
+            </div>
+            <div class="row" style="margin-left: 150px;">
+                <div class="row2"><label><b>Enter your mass in kilograms (kg)</b></label></div>
+                <div class="row2"><label class="label">Mass <input class="input" type="number"
+                                                                   th:field="*{mass}"
+                                                                   step="0.01" min="20.00" max="300.00"/></label></div>
+            </div>
+            <div style="clear: both;"></div>
+            <div class="row">
+                <div class="row2"><label><b>Enter your age</b></label></div>
+                <div class="row2"><label class="label">Age <input class="input" type="number"
+                                                                  th:field="*{age}"
+                                                                  step="1" min="1" max="100"/></label></div>
+            </div>
+            <div class="row">
+                <div class="row2"><label><b>Choose gender:</b></label></div>
+                <div class="row2" style="text-align: right;"><label class="labelradio">Male <input class="inputradio" type="radio"
+                                                                   th:field="*{gender}" name="gender" th:value="'male'"
+                /></label></div>
+                <div class="row2" style="text-align: right;"><label class="labelradio">Female <input class="inputradio" type="radio"
+                                                                     th:field="*{gender}" name="gender"
+                                                                     th:value="'female'"
+                /></label></div>
+            </div>
+            <div class="row">
+                <label for="lifestyle"><b>Lifestyle:</b></label>
+                <select id="lifestyle" name="lifestyle" th:field="*{lifestyleS}">
+                    <option th:value="'a'">lying or sedentary lifestyle, lack of physical
+                        activity
+                    </option>
+                    <option th:value="'b'">sedentary work, low-level physical activity</option>
+                    <option th:value="'c'">non-physical work, training twice a week</option>
+                    <option th:value="'d'">light physical work, training 3-4 times a week</option>
+                    <option th:value="'e'">physical work, training 5 times a week</option>
+                    <option th:value="'f'">hard physical work, daily training</option>
+                </select>
+            </div>
+            <div style="clear: both;"></div>
+            <div id="buttondiv">
+                <button id="button" type="submit"><b>Count</b></button>
+            </div>
+        </form>
+    </div>
+    <div id="footer">
+        <img src="https://www.superfitfoods.co/wp-content/uploads/2018/02/banner-list.jpg">
+    </div>
 </div>
 </body>
 </html>

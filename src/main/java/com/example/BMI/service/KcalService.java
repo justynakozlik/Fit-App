@@ -19,7 +19,7 @@ public class KcalService implements KcalRepository {
         if (gender.equals("male")) {
             return (66.5 + (13.7 * mass) + (5 * height) - (6.8 * age)) * lifestyle;
         } else {
-            return (65.5 + (9.6 * mass) + (1.85 * height) - (4.7 * age)) * lifestyle;
+            return (655.5 + (9.6 * mass) + (1.85 * height) - (4.7 * age)) * lifestyle;
         }
     }
 
