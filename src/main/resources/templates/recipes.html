@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipes</title>
+</head>
+<body>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Category</th>
+        <th>Name</th>
+    </tr>
+    </thead>
+    <tbody th:each="recipe : ${recipes}">
+    <tr>
+        <td th:text="${recipe.category}"></td>
+        <td>
+            <a th:href="@{/recipes/{id}(id = ${recipe.id})}">
+                <span th:text="${recipe.name}"></span>
+            </a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
