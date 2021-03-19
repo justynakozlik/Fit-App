@@ -3,25 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>Recipes</title>
+    <link rel="stylesheet" href="css/recipes.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-<table class="table">
-    <thead>
-    <tr>
-        <th>Category</th>
-        <th>Name</th>
-    </tr>
-    </thead>
-    <tbody th:each="recipe : ${recipes}">
-    <tr>
-        <td th:text="${recipe.category}"></td>
-        <td>
-            <a th:href="@{/recipes/{id}(id = ${recipe.id})}">
-                <span th:text="${recipe.name}"></span>
-            </a>
-        </td>
-    </tr>
-    </tbody>
-</table>
+<div id="container">
+    <div id="rectangle">
+        <h1>Recipes</h1>
+        <h3>Check out some recipes!</h3>
+    </div>
+    <div class="square">
+        <table>
+            <thead>
+            <tr style="border: 0px;">
+                <th style="border-bottom-left-radius: 15px; border-top-left-radius: 15px;">Category</th>
+                <th style="border-bottom-right-radius: 15px; border-top-right-radius: 15px;">Name</th>
+            </tr>
+            </thead>
+            <tbody th:each="recipe : ${recipes}">
+            <tr>
+                <td th:text="${recipe.category}"></td>
+                <td>
+                    <a th:href="@{/recipes/{id}(id = ${recipe.id})}">
+                        <span th:text="${recipe.name}"></span>
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="square">
+        <div class="row">
+            <img src="https://www.healthnavigator.org.nz/media/5518/food-on-a-table-200x200.jpg">
+        </div>
+        <div class="row" style="text-align: right;">
+            <img src="https://www.evergreen.ca/images/badges/insert-SummerWEdnesdaysFood-200x200.jpg">
+        </div>
+        <div class="row">
+            <img src="https://i.pinimg.com/236x/24/ed/ba/24edba65159a35626ef5295d58b4ba82.jpg">
+        </div>
+    </div>
+    <div style="clear: both;"></div>
+</div>
 </body>
 </html>
