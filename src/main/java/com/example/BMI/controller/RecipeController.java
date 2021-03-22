@@ -24,10 +24,14 @@ public class RecipeController {
     }
 
     @GetMapping("/recipes/{id}")
-    public String getRecipe(@PathVariable("id") int id){
-        if(id==1){
+    public String getRecipe(@PathVariable("id") int id) {
+        if (id == 1) {
             return "recipe1";
+        } else if (id == 2) {
+            return "recipe2";
+        } else if (id == 3) {
+            return "recipe3";
         }
-        return "recipe2";
+        return "recipe4";
     }
 }
